@@ -1,5 +1,5 @@
 {
-  "name": "create-react-components",
+  "name": "cli-react-components",
   "version": "1.0.0",
   "description": "Basic CLI to create React componentbase on this tutorial (https://www.sitepoint.com/javascript-command-line-interface-cli-node-js/)",
   "keywords": [
@@ -13,10 +13,10 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Anthony Tomson (https://www.linkedin.com/in/anthony-tomson-31953a101)",
-  "homepage": "https://github.com/Skyller360/create-react-components",
+  "homepage": "https://github.com/Skyller360/cli-react-components",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Skyller360/create-react-components"
+    "url": "https://github.com/Skyller360/cli-react-components"
   },
   "license": "MIT",
   "dependencies": {
