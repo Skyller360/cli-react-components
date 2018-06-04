@@ -26,3 +26,36 @@ Second, choose if you want to use `scss` or `css` files for design
 Last, choose the directory where it will create the component (default: `src`)
 
 `? In which folder do you want to create it ? (src): src/components`
+
+#### Result :
+
+A directory named as the component name you've chosen will be created.
+This directory will contain a `.js` and a `.scss` or `.css` files depending what was your style choice.
+
+### Example :
+
+`cli-react-components`
+
+`> myComponent`
+
+`scss`
+
+`> src/components`
+
+Result : `src/components/myComponent/myComponent.js` `src/components/myComponent/myComponent.scss`
+
+Inside of the `.js` file :
+
+```
+import React, { Component } from 'react';
+import './myComponent.scss'
+
+export class myComponent extends Component {
+
+    render() {
+        return (
+            <h1>myComponent works</h1>
+        );
+    }
+}
+```
