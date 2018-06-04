@@ -8,7 +8,7 @@ Basic CLI to create React component based on this tutorial (https://www.sitepoin
 
 Run
 
-`cli-react-components`
+`cli-react-components` or `crc`
 
 First, enter your component name :
 
