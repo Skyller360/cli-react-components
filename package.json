@@ -28,6 +28,6 @@
     "shelljs": "^0.8.2"
   },
   "bin": {
-    "create-component": "./index.js"
+    "cli-react-components": "./index.js"
   }
 }
