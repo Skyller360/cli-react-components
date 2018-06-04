@@ -4,17 +4,11 @@ Basic CLI to create React component based on this tutorial (https://www.sitepoin
 
 ### How To :
 
-Install all dependencies 
-
-`npm install`
-
-Or install it globally
-
-`npm install -g create-react-components`
+`npm install -g cli-react-components`
 
 Run
 
-`node index.js`
+`cli-react-components`
 
 First, enter your component name :
 
