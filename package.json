@@ -19,7 +19,9 @@
     "clear": "^0.1.0",
     "figlet": "^1.2.0",
     "inquirer": "^6.0.0",
-    "mkdirp": "^0.5.1"
+    "mkdirp": "^0.5.1",
+    "replace": "^1.0.0",
+    "shelljs": "^0.8.2"
   },
   "bin": {
     "create-component": "./index.js"

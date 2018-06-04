@@ -1,6 +1,7 @@
 const fs = require('fs');
 const mkdirp = require('mkdirp');
 const exec = require('child_process').exec;
+const shell = require('shelljs');
 
 module.exports = {
     directoryExists: (filePath) => {
@@ -12,11 +13,10 @@ module.exports = {
     },
 
     writeFile: (fileName, path, extension) => {
-        try  {
-            exec(`sed -e 's/App/${fileName}'/g ${__dirname}/template.js`, (err, stdout, stderr) => {
-                fs.writeFileSync(`${__dirname}/${path}/${fileName}/${fileName}.js`, stdout);
-                fs.writeFileSync(`${__dirname}/${path}/${fileName}/${fileName}.${extension}`, '');
-            });
+        try {
+            const result = shell.sed('App', fileName, 'template.js');
+            fs.writeFileSync(`${__dirname}/${path}/${fileName}/${fileName}.js`, result.stdout);
+            fs.writeFileSync(`${__dirname}/${path}/${fileName}/${fileName}.${extension}`, '');
         } catch (e) {
             console.log('error', e);
         }
