@@ -1,6 +1,5 @@
 const fs = require('fs');
 const mkdirp = require('mkdirp');
-const exec = require('child_process').exec;
 const shell = require('shelljs');
 
 module.exports = {

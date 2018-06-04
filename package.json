@@ -12,15 +12,18 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Anthony Tomson (https://www.linkedin.com/in/anthony-tomson-31953a101)",
+  "homepage": "https://github.com/Skyller360/create-components",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Skyller360/create-components"
+  },
   "license": "MIT",
   "dependencies": {
     "chalk": "^2.4.1",
-    "child_process": "^1.0.2",
     "clear": "^0.1.0",
     "figlet": "^1.2.0",
     "inquirer": "^6.0.0",
     "mkdirp": "^0.5.1",
-    "replace": "^1.0.0",
     "shelljs": "^0.8.2"
   },
   "bin": {
