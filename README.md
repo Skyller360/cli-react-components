@@ -27,6 +27,11 @@ Last, choose the directory where it will create the component (default: `src`)
 
 `? In which folder do you want to create it ? (src): src/components`
 
+
+You can also do it in one line:
+
+`crc Hello scss src/components`
+
 #### Result :
 
 A directory named as the component name you've chosen will be created.
@@ -59,3 +64,5 @@ export class myComponent extends Component {
     }
 }
 ```
+
+See src/Example directory
