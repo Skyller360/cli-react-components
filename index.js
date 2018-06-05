@@ -15,20 +15,42 @@ console.log(
 );
 
 const run = async () => {
-    const componentInfo = await inquirer.askComponentName();
+    let componentInfo = handleParams(process.argv);
+    componentInfo = {
+        ...componentInfo,
+        ...await inquirer.askComponentName(componentInfo)
+    };
     if (files.directoryExists(`${__dirname}/${componentInfo.path}`) && files.directoryExists(`${__dirname}/${componentInfo.path}/${componentInfo.name}`)) {
 
         console.log(chalk.blue('Directory exist'));
-        files.writeFile(componentInfo.name, componentInfo.style);
-    } else {
-
-        console.log(chalk.blue('Creating directory', componentInfo.path, componentInfo.name));
-        files.createDirectory(componentInfo.path, componentInfo.name);
-        console.log(chalk.green('Directory', componentInfo.name, 'created !'));
 
         console.log(chalk.blue('Creating', componentInfo.name, 'js and', componentInfo.style, 'files'));
         files.writeFile(componentInfo.name, componentInfo.path, componentInfo.style);
         console.log(chalk.green('Done !'));
+    } else {
+
+        console.log(chalk.blue('Creating directory', componentInfo.path, componentInfo.name));
+
+        const callback = () => {
+            console.log(chalk.green('Directory', componentInfo.name, 'created !'));
+
+            console.log(chalk.blue('Creating', componentInfo.name, 'js and', componentInfo.style, 'files'));
+            files.writeFile(componentInfo.name, componentInfo.path, componentInfo.style);
+            console.log(chalk.green('Done !'));
+        };
+        files.createDirectory(componentInfo.path, componentInfo.name, callback);
+
+    }
+}
+
+const handleParams = (params) => {
+    if (params.length < 2) {
+        return;
+    } else {
+        const name = params[2];
+        const style = params[3];
+        const path = params[4];
+        return {name, style, path};
     }
 }
 
