@@ -1,7 +1,7 @@
 {
   "name": "cli-react-components",
-  "version": "1.0.3",
-  "description": "Basic CLI to create React componentbase on this tutorial (https://www.sitepoint.com/javascript-command-line-interface-cli-node-js/)",
+  "version": "1.1.0",
+  "description": "Basic CLI to create React component !",
   "keywords": [
     "cli",
     "react",
