@@ -21,9 +21,12 @@ module.exports = {
         }
     },
 
-    createDirectory: (path, name) => {
-        mkdirp(`${__dirname}/${path}/${name}`, (err) => {
-            if (err) throw err;
-        });
+    createDirectory: (path, name, callback) => {
+        return new Promise((res, err) => {
+            mkdirp(`${__dirname}/${path}/${name}`, (err) => {
+                if (err) throw err;
+                callback();
+            });
+        })
     }
 };
