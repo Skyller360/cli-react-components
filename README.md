@@ -1,6 +1,6 @@
 ### Description
 
-Basic CLI to create React component based on this tutorial (https://www.sitepoint.com/javascript-command-line-interface-cli-node-js/)
+Basic CLI to create React component based on [this tutorial](https://www.sitepoint.com/javascript-command-line-interface-cli-node-js/)
 
 ### How To :
 
@@ -65,4 +65,4 @@ export class myComponent extends Component {
 }
 ```
 
-See src/Example directory
+See [src/Example directory](https://github.com/Skyller360/cli-react-components/tree/master/src/Example)
