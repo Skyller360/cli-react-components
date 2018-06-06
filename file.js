@@ -13,9 +13,9 @@ module.exports = {
 
     writeFile: (fileName, path, extension) => {
         try {
-            const result = shell.sed('App', fileName, 'template.js');
-            fs.writeFileSync(`${__dirname}/${path}/${fileName}/${fileName}.js`, result.stdout);
-            fs.writeFileSync(`${__dirname}/${path}/${fileName}/${fileName}.${extension}`, '');
+            const result = shell.sed('App', fileName, `${__dirname}/template.js`);
+            fs.writeFileSync(`${process.cwd()}/${path}/${fileName}/${fileName}.js`, result.stdout);
+            fs.writeFileSync(`${process.cwd()}/${path}/${fileName}/${fileName}.${extension}`, '');
         } catch (e) {
             console.log('error', e);
         }
@@ -23,7 +23,7 @@ module.exports = {
 
     createDirectory: (path, name, callback) => {
         return new Promise((res, err) => {
-            mkdirp(`${__dirname}/${path}/${name}`, (err) => {
+            mkdirp(`${process.cwd()}/${path}/${name}`, (err) => {
                 if (err) throw err;
                 callback();
             });

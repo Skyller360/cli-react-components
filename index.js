@@ -20,7 +20,8 @@ const run = async () => {
         ...componentInfo,
         ...await inquirer.askComponentName(componentInfo)
     };
-    if (files.directoryExists(`${__dirname}/${componentInfo.path}`) && files.directoryExists(`${__dirname}/${componentInfo.path}/${componentInfo.name}`)) {
+
+    if (files.directoryExists(`${process.cwd()}/${componentInfo.path}`) && files.directoryExists(`${process.cwd()}/${componentInfo.path}/${componentInfo.name}`)) {
 
         console.log(chalk.blue('Directory exist'));
 
